@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whisper Ink Tattoos - Artists</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #fff5e1;
+            font-family: 'Playfair Display', serif;
+        }
+        .navbar {
+            background-color: #333; 
+            border: 2px solid #000; 
+            border-radius: 10px; 
+            padding: 10px; 
+        }
+        .nav-link {
+            color: white !important; 
+            font-size: 1.5rem;
+            margin-right: 20px;
+        }
+        .nav-link.active {
+            text-decoration: underline; /* Underline for active link */
+        }
+        .header-logo {
+            max-height: 150px;
+        }
+        .content {
+            position: relative;
+            text-align: center;
+            color: black;
+            padding: 20px;
+        }
+        .content img {
+            object-fit: cover;
+            height: 100%; /* Fixed height */
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .artist-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 80px; /* Increased margin-bottom for more space */
+            background-color: #E8DCC6; /* Light grey background */
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #ddd; /* Light grey border */
+        }
+        .artist-info {
+            text-align: left;
+        }
+
+        .artist-info img{
+            object-fit: contain;
+            height: 200px; /* Fixed height */
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .artist-portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .artist-portfolio img {
+            max-width: 150px;
+            height: auto;
+            border: 2px solid black;
+        }
+        .header{
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            background-color: #333; /* Darker background color */
+        }
+        .footer {
+            background-color: #fff5e1;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+ <!-- Navigation Bar -->
+ <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="index.html">
+        <img src="images/inverted_logo.png" alt="Whisper Ink Tattoos" class="header-logo">
+    </a>
+    <div class="header">
+        <p>123 First St, Nowhere, Canada <br> 123-456-7890 <br> Hours of Operation:<strong> Mon-Sat: 9:00 - 18:00 </strong></p>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="artists.html">Artists</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Services
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="tattoos.html">Tattoos</a>
+                    <a class="dropdown-item" href="peircings.html">Piercings</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="request-appointment.html">Request an Appointment</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="artist-section">
+            <div class="artist-info">
+                <img src="images/kayli_mesly/headshot.jpeg" alt="Artist 1">
+                <h2>Kayli Mesly</h2>
+                <p>Kayli’s talent and style transcend traditional tattooing and is more evocative of fine art. </p>
+                <p>Drawing inspiration from Renaissance, romanticism, fairytale, and natural imagery,<br> she prides herself on interweaving her client’s contemporary requests into traditional <br> aesthetics to create truly timeless works.</p>
+                <p>Find her Portfolio Below!</p>
+                <p><strong>Instagram:</strong> @kayli_mesly</p>
+            </div>
+            <div class="artist-portfolio">
+                <img src="images/kayli_mesly/art1.JPG" alt="Art 1">
+                <img src="images/kayli_mesly/art2.jpeg" alt="Art 2">
+                <img src="images/kayli_mesly/art3.jpeg" alt="Art 3">
+                <img src="images/kayli_mesly/art4.jpeg" alt="Art 4">
+            </div>
+        </div>
+
+        <div class="artist-section">
+            <div class="artist-info">
+                <img src="images/justin_feild/headshot.jpeg" alt="Artist 2">
+                <h2>Justin Feild</h2>
+                <p>Although a maximalist himself, Justin believes that less is more in life, <br> especially regarding tattooing. He strives to incorporate this belief into his <br> work - concentrating on the essence of his client’s designs and executing the most <br> precise vision imaginable.</p>
+                <p>Find his Portfolio Below!</p>
+                <p><strong>Instagram:</strong> @justin_feild</p>
+            </div>
+            <div class="artist-portfolio">
+                <img src="images/justin_feild/art1.jpeg" alt="Art 1">
+                <img src="images/justin_feild/art2.jpeg" alt="Art 2">
+                <img src="images/justin_feild/art3.jpeg" alt="Art 3">
+                <img src="images/justin_feild/art4.jpeg" alt="Art 4">
+            </div>
+        </div>
+
+        <div class="artist-section">
+            <div class="artist-info">
+                <img src="images/mack_johnson/headshot.jpeg" alt="Artist 3">
+                <h2>Mack Johnson</h2>
+                <p>Mack's tattoo career began four years ago. She excelled in oil painting and <br> academic drawing from an early age, finding inspiration from art nouveau,<br> romanticism, and nature. Prior to tattooing, she worked in graphic design, <br>which has played a key part in developing her minimal yet dynamic compositions. </p>
+                <p>Mack’s designs are a mixture of realism, line work, and negative space.<br> She specializes in black & grey, micro-realism, and pet/wildlife portraits. </p>
+                <p>Find her Portfolio Below!</p>
+                <p><strong>Instagram:</strong> @mack_johnson</p>
+            </div>
+            <div class="artist-portfolio">
+                <img src="images/mack_johnson/art1.jpeg" alt="Art 1">
+                <img src="images/mack_johnson/art2.jpeg" alt="Art 2">
+                <img src="images/mack_johnson/art3.jpeg" alt="Art 3">
+                <img src="images/mack_johnson/art4.jpeg" alt="Art 4">
+            </div>
+        </div>
+
+        <div class="artist-section">
+            <div class="artist-info">
+                <img src="images/james_williams/headshot.jpeg" alt="Artist 4">
+                <h2>James Williams</h2>
+                <p>James's tattoo compositions draw from the same inspiration from his upbringing - <br>classical paintings, woodcut engravings, and sculpture work, as well as vintage 20th-century imagery.<br>
+                <p>These integrations create an appeal to the intellect through sometimes surrealistic dichotomies in his <br>micro-realism designs. </p> 
+                <p>He strives to emphasize the influence of fine art in his work - he believes it adds a certain <br>sophistication to how a tattoo adorns a part of the body.</p>
+                <p>Find his Portfolio Below!</p>
+                <p><strong>Instagram:</strong> @james_williams</p>
+            </div>
+            <div class="artist-portfolio">
+                <img src="images/james_williams/art1.jpeg" alt="Art 1">
+                <img src="images/james_williams/art2.jpeg" alt="Art 2">
+                <img src="images/james_williams/art3.jpeg" alt="Art 3">
+                <img src="images/james_williams/art4.jpeg" alt="Art 4">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <img src="images/logo.webp" alt="Whisper Ink Tattoos" class="header-logo">
+        <p>123 First St, Nowhere, Canada | 123-456-7890 | Hours of Operation: Mon-Sat: 9:00 - 18:00</p>
+        <p>Follow Us: 
+            <a href="#"><img src="images/facebook.png" alt="Facebook" width=20px height = 20px></a> 
+            <a href="#"><img src="images/instagram.webp" alt="Instagram" width=20px height = 20px></a>
+        </p>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var path = window.location.pathname;
+            var page = path.split("/").pop();
+
+            var navLinks = document.querySelectorAll('.nav-link');
+
+            navLinks.forEach(function (link) {
+                if (link.getAttribute('href') === page) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+

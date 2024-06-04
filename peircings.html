@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whisper Ink Tattoos - Piercings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #fff5e1;
+            font-family: 'Playfair Display', serif;
+        }
+        .navbar {
+            background-color: #333; 
+            border: 2px solid #000; 
+            border-radius: 10px; 
+            padding: 10px; 
+        }
+        .nav-link {
+            color: white !important; 
+            font-size: 1.5rem;
+            margin-right: 20px;
+        }
+        .nav-link.active {
+            text-decoration: underline; /* Underline for active link */
+        }
+        .header-logo {
+            max-height: 150px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .section {
+            background-color: #E8DCC6;
+            padding: 20px;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            border: 2px solid #ddd;
+        }
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .section p {
+            font-size: 1.25rem;
+            line-height: 1.5;
+        }
+        .piercers .piercer {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .piercers .piercer img {
+            max-width: 220px;
+            margin-right: 20px;
+            border-radius: 50%;
+        }
+        .piercer-info {
+            max-width: calc(100% - 240px); /* Adjust width based on image size and margin */
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .gallery img {
+            max-width: 220px;
+            height: auto;
+            border: 2px solid black;
+        }
+        .footer {
+            background-color: #fff5e1;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .header{
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            background-color: #333; 
+        }
+        .artist-portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/inverted_logo.png" alt="Whisper Ink Tattoos" class="header-logo">
+        </a>
+        <div class="header">
+            <p>123 First St, Nowhere, Canada <br> 123-456-7890 <br> Hours of Operation:<strong> Mon-Sat: 9:00 - 18:00 </strong></p>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="artists.html">Artists</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active" href="piercings.html">Piercings</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Services
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="tattoos.html">Tattoos</a>
+                        <a class="dropdown-item" href="piercings.html">Piercings</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="request-appointment.html">Request an Appointment</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content">
+
+         <!-- Piercers Section -->
+         <div class="section piercers">
+            <h2>Piercers</h2>
+            <div class="piercer">
+                <img src="images/piercing/melody_swindle.jpeg" alt="Piercer 1">
+                <div class="piercer-info">
+                    <p><strong>Melody Swindle</strong> - Melody has been a professional piercer for over 10 years and specializes in various types of body piercings.</p>
+                </div>
+            </div>
+            <div class="piercer">
+                <img src="images/piercing/nate_kilden.jpeg" alt="Piercer 2">
+                <div class="piercer-info">
+                    <p><strong>Nate Kilden</strong> - Nate is known for their precision and gentle touch, ensuring a comfortable piercing experience.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Before Piercing Notes Section -->
+        <div class="section">
+            <h2>Before Piercing Notes</h2>
+            <p>Before getting a piercing, please keep the following notes in mind:</p>
+            <ul>
+                <li>Ensure you are well-hydrated and have eaten something light before your appointment.</li>
+                <li>Avoid alcohol and caffeine before your piercing session.</li>
+                <li>Make sure to bring a valid ID for age verification.</li>
+                <li>Discuss any allergies or medical conditions with your piercer beforehand.</li>
+            </ul>
+        </div>
+
+        <!-- Aftercare Notes Section -->
+        <div class="section">
+            <h2>Aftercare Notes</h2>
+            <p>Proper aftercare is crucial for a successful healing process. Here are our recommended aftercare tips:</p>
+            <ul>
+                <li>Clean your piercing twice a day with a saline solution.</li>
+                <li>Avoid touching the piercing with dirty hands.</li>
+                <li>Refrain from swimming in pools or hot tubs until fully healed.</li>
+                <li>Avoid changing the jewelry until your piercer gives the go-ahead.</li>
+            </ul>
+        </div>
+
+        <!-- Cost Section -->
+        <div class="section">
+            <h2>Cost</h2>
+            <p>Our piercing services are competitively priced. Here is a breakdown of our costs:</p>
+            <ul>
+                <li>Ear Piercings: $40</li>
+                <li>Nose Piercings: $50</li>
+                <li>Belly Button Piercings: $60</li>
+                <li>Other Piercings: Please contact us for a quote.</li>
+            </ul>
+        </div>
+
+        <!-- Gallery Section -->
+        <div class="section">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="images/piercing/piercing1.jpeg" alt="Piercing 1">
+                <img src="images/piercing/piercing2.webp" alt="Piercing 2">
+                <img src="images/piercing/piercing3.jpeg" alt="Piercing 3">
+                <img src="images/piercing/piercing4.webp" alt="Piercing 4">
+                <img src="images/piercing/piercing5.jpeg" alt="Piercing 5">
+                <img src="images/piercing/piercing6.webp" alt="Piercing 6">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <img src="images/logo.webp" alt="Whisper Ink Tattoos" class="header-logo">
+        <p>123 First St, Nowhere, Canada | 123-456-7890 | Hours of Operation: Mon-Sat: 9:00 - 18:00</p>
+        <p>Follow Us: 
+            <a href="#"><img src="images/facebook.png" alt="Facebook" width=20px height = 20px></a> 
+            <a href="#"><img src="images/instagram.webp" alt="Instagram" width=20px height = 20px></a>
+        </p>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var path = window.location.pathname;
+            var page = path.split("/").pop();
+
+            var navLinks = document.querySelectorAll('.nav-link');
+
+            navLinks.forEach(function (link) {
+                if (link.getAttribute('href') === page) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

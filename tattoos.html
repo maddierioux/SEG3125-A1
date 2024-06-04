@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whisper Ink Tattoos</title>
+    <title>Whisper Ink Tattoos - Tattoos</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
@@ -23,32 +23,38 @@
             margin-right: 20px;
         }
         .nav-link.active {
-            text-decoration: underline; 
+            text-decoration: underline; /* Underline for active link */
         }
         .header-logo {
             max-height: 150px;
         }
         .content {
-            position: relative;
-            text-align: center;
-            color: white;
+            padding: 20px;
         }
-        .content img {
-            object-fit: cover;
-            height: 500px; 
-            width: 100%;
-            opacity: 0.7; 
+        .section {
+            background-color: #E8DCC6;
+            padding: 20px;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            border: 2px solid #ddd;
         }
-        .content .btn {
-            position: absolute;
-            top: 40%;
-            left: 83%;
-            background-color: black;
-            border: none;
-            font-size: 1.6rem; 
-            padding: 1rem 2rem; 
-            color: white; 
-            text-decoration: none; 
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .section p {
+            font-size: 1.25rem;
+            line-height: 1.5;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .gallery img {
+            max-width: 220px;
+            height: auto;
+            border: 2px solid black;
         }
         .header{
             color: white;
@@ -56,33 +62,15 @@
             padding: 40px 0;
             background-color: #333; 
         }
-        
         .footer {
             background-color: #fff5e1;
             text-align: center;
-            padding: 40px 0;
-        }
-        .welcome-note-1 {
-            color: black;
-            font-size: 1.5rem;
-            padding: 20px;
-            margin: 20px auto;
-            width: 80%;
-            font-style: italic;
-        }
-        .welcome-note-2 {
-            color: black;
-            font-size: 1.25rem;
-            padding: 20px;
-            margin: 20px auto;
-            border: 2px solid black;
-            border-radius: 10px;
-            width: 80%;
-            font-style: italic;
+            padding: 20px 0;
         }
     </style>
 </head>
 <body>
+    <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="index.html">
             <img src="images/inverted_logo.png" alt="Whisper Ink Tattoos" class="header-logo">
@@ -96,13 +84,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" href="index.html">Home</a> 
+                    <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link" href="artists.html">Artists</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="piercings.html">Piercings</a>
+                    <a class="nav-link active" href="tattoos.html">Tattoos</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -110,7 +98,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="tattoos.html">Tattoos</a>
-                        <a class="dropdown-item" href="piercings.html">Piercings</a>
+                        <a class="dropdown-item" href="peircings.html">Piercings</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -122,13 +110,56 @@
 
     <!-- Main Content -->
     <div class="content">
-        <img src="images/shop.jpeg" class="img-fluid" alt="Tattoo Studio">
-        <a href="contact_us.html" class="btn btn-dark mt-4">Contact Us</a>
-        <div class="welcome-note-1">
-            Welcome to Whisper Ink Tattoos, where every ink stroke tells a story and every design is a whisper from the soul.
+        <!-- Cost Section -->
+
+        <!-- Before Tattoo Notes Section -->
+        <div class="section">
+            <h2>Before Tattoo Notes</h2>
+            <p>Before getting a tattoo, please keep the following notes in mind:</p>
+            <ul>
+                <li>Ensure you are well-hydrated and have eaten something light before your appointment.</li>
+                <li>Avoid alcohol and caffeine before your tattoo session.</li>
+                <li>Make sure to bring a valid ID for age verification.</li>
+                <li>Discuss any allergies or medical conditions with your tattoo artist beforehand.</li>
+            </ul>
         </div>
-        <div class="welcome-note-2">
-        At Whisper Ink Tattoos, our values are deeply rooted in creativity, inclusivity, and a passion for the art of tattooing. We believe in creating a welcoming space where everyone feels at home, whether it's your first tattoo or your fiftieth.<br> <br>Our team of artists brings a wealth of experience and a shared love for the craft, each of us having honed our skills in various renowned studios across the country. United by our dedication to quality and our respect for individual expression, we pour our hearts into every piece we create. <br><br>Step into Whisper Ink Tattoos and become a part of our story, where your dreams and our artistry come together to create something truly special.
+
+        <!-- Aftercare Notes Section -->
+        <div class="section">
+            <h2>Aftercare Notes</h2>
+            <p>Proper aftercare is crucial for a successful healing process. Here are our recommended aftercare tips:</p>
+            <ul>
+                <li>Keep the tattooed area clean and dry.</li>
+                <li>Avoid touching the tattoo with dirty hands.</li>
+                <li>Apply a thin layer of tattoo aftercare cream as recommended by your artist.</li>
+                <li>Avoid direct sunlight and swimming until fully healed.</li>
+                <li>Refrain from scratching or picking at the tattoo.</li>
+            </ul>
+        </div>
+
+        <!-- Cost -->
+        <div class="section">
+            <h2>Cost</h2>
+            <p>Our tattoo services are competitively priced. Below is a breakdown of our <strong>BASELINE</strong> costs.<br> Each artist and tattoo design mkaes the price vary. <br> Please contact the shop for further details</p>
+            <ul>
+                <li>Small Tattoos: Starting at $150</li>
+                <li>Medium Tattoos: Starting at $300</li>
+                <li>Large Tattoos: Starting at $700</li>
+            </ul>
+        </div>
+
+        <!-- Gallery Section -->
+        <div class="section">
+            <h2>Gallery</h2>
+            <p> All tattoos listed here are Medium sized tattoos for your refrence</p>
+            <div class="gallery">
+                <img src="images/tattoos/tattoo1.jpeg" alt="Tattoo 1">
+                <img src="images/tattoos/tattoo2.jpeg" alt="Tattoo 2">
+                <img src="images/tattoos/tattoo3.jpeg" alt="Tattoo 3">
+                <img src="images/tattoos/tattoo4.jpeg" alt="Tattoo 4">
+                <img src="images/tattoos/tattoo5.jpeg" alt="Tattoo 5">
+                <img src="images/tattoos/tattoo6.jpeg" alt="Tattoo 6">
+            </div>
         </div>
     </div>
 
@@ -162,5 +193,3 @@
     </script>
 </body>
 </html>
-
-

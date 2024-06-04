@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whisper Ink Tattoos</title>
+    <title>Whisper Ink Tattoos - Artists</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             background-color: #fff5e1;
@@ -23,7 +24,7 @@
             margin-right: 20px;
         }
         .nav-link.active {
-            text-decoration: underline; 
+            text-decoration: underline; /* Underline for active link */
         }
         .header-logo {
             max-height: 150px;
@@ -31,58 +32,80 @@
         .content {
             position: relative;
             text-align: center;
-            color: white;
+            color: black;
+            padding: 20px;
         }
         .content img {
             object-fit: cover;
-            height: 500px; 
+            height: 100%; /* Fixed height */
             width: 100%;
-            opacity: 0.7; 
+            margin-bottom: 10px;
         }
-        .content .btn {
-            position: absolute;
-            top: 40%;
-            left: 83%;
-            background-color: black;
-            border: none;
-            font-size: 1.6rem; 
-            padding: 1rem 2rem; 
-            color: white; 
-            text-decoration: none; 
+        .artist-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 80px; /* Increased margin-bottom for more space */
+            background-color: #E8DCC6; /* Light grey background */
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #ddd; /* Light grey border */
+        }
+        .artist-info {
+            text-align: left;
+        }
+
+        .artist-info img{
+            object-fit: contain;
+            height: 200px; /* Fixed height */
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .artist-portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .artist-portfolio img {
+            max-width: 150px;
+            height: auto;
+            border: 2px solid black;
         }
         .header{
             color: white;
             text-align: center;
             padding: 40px 0;
-            background-color: #333; 
+            background-color: #333; /* Darker background color */
         }
-        
         .footer {
             background-color: #fff5e1;
             text-align: center;
-            padding: 40px 0;
+            padding: 20px 0;
         }
-        .welcome-note-1 {
-            color: black;
-            font-size: 1.5rem;
-            padding: 20px;
-            margin: 20px auto;
-            width: 80%;
-            font-style: italic;
+        /* Notification styles */
+        .notification {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #4caf50;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            z-index: 1000;
         }
-        .welcome-note-2 {
-            color: black;
-            font-size: 1.25rem;
-            padding: 20px;
-            margin: 20px auto;
-            border: 2px solid black;
-            border-radius: 10px;
-            width: 80%;
-            font-style: italic;
+        .notification i {
+            margin-right: 10px;
         }
     </style>
 </head>
 <body>
+    <!-- Notification Icon -->
+    <div class="notification" id="notification">
+        <i class="fas fa-check-circle"></i> Message Sent Successfully!
+    </div>
+    
+    <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="index.html">
             <img src="images/inverted_logo.png" alt="Whisper Ink Tattoos" class="header-logo">
@@ -96,7 +119,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" href="index.html">Home</a> 
+                    <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link" href="artists.html">Artists</a>
@@ -113,22 +136,29 @@
                         <a class="dropdown-item" href="piercings.html">Piercings</a>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="request-appointment.html">Request an Appointment</a>
-                </li>
             </ul>
         </div>
     </nav>
 
     <!-- Main Content -->
     <div class="content">
-        <img src="images/shop.jpeg" class="img-fluid" alt="Tattoo Studio">
-        <a href="contact_us.html" class="btn btn-dark mt-4">Contact Us</a>
-        <div class="welcome-note-1">
-            Welcome to Whisper Ink Tattoos, where every ink stroke tells a story and every design is a whisper from the soul.
-        </div>
-        <div class="welcome-note-2">
-        At Whisper Ink Tattoos, our values are deeply rooted in creativity, inclusivity, and a passion for the art of tattooing. We believe in creating a welcoming space where everyone feels at home, whether it's your first tattoo or your fiftieth.<br> <br>Our team of artists brings a wealth of experience and a shared love for the craft, each of us having honed our skills in various renowned studios across the country. United by our dedication to quality and our respect for individual expression, we pour our hearts into every piece we create. <br><br>Step into Whisper Ink Tattoos and become a part of our story, where your dreams and our artistry come together to create something truly special.
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form id="contactForm" action="submit-form.php" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone">
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
         </div>
     </div>
 
@@ -137,8 +167,8 @@
         <img src="images/logo.webp" alt="Whisper Ink Tattoos" class="header-logo">
         <p>123 First St, Nowhere, Canada | 123-456-7890 | Hours of Operation: Mon-Sat: 9:00 - 18:00</p>
         <p>Follow Us: 
-            <a href="#"><img src="images/facebook.png" alt="Facebook" width=20px height = 20px></a> 
-            <a href="#"><img src="images/instagram.webp" alt="Instagram" width=20px height = 20px></a>
+            <a href="#"><img src="images/facebook.png" alt="Facebook" width=20px height=20px></a> 
+            <a href="#"><img src="images/instagram.webp" alt="Instagram" width=20px height=20px></a>
         </p>
     </div>
 
@@ -158,9 +188,24 @@
                     link.classList.add('active');
                 }
             });
+
+            // Form submission event listener
+            var form = document.getElementById('contactForm');
+            form.addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                // Show notification
+                var notification = document.getElementById('notification');
+                notification.style.display = 'block';
+
+                // Hide the notification after 3 seconds
+                setTimeout(function () {
+                    notification.style.display = 'none';
+                    form.submit(); // Submit the form after showing the notification
+                }, 3000);
+            });
         });
     </script>
 </body>
 </html>
-
 
