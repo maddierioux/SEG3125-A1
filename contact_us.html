@@ -157,6 +157,7 @@
         </div>
     </div>
 
+
     <div class="footer">
         <img src="images/logo.webp" alt="Whisper Ink Tattoos" class="header-logo">
         <p>123 First St, Nowhere, Canada | 123-456-7890 | Hours of Operation: Mon-Sat: 9:00 - 18:00</p>
@@ -181,16 +182,20 @@
                     link.classList.add('active');
                 }
             });
+
+            // Form submission event listener
             var form = document.getElementById('contactForm');
             form.addEventListener('submit', function (event) {
-                event.preventDefault(); 
+                event.preventDefault(); // Prevent the default form submission
 
+                // Show notification
                 var notification = document.getElementById('notification');
                 notification.style.display = 'block';
 
+                // Hide the notification after 3 seconds
                 setTimeout(function () {
                     notification.style.display = 'none';
-                    form.submit();
+                    form.submit(); // Submit the form after showing the notification
                 }, 3000);
             });
         });
