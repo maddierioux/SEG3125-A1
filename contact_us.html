@@ -24,7 +24,7 @@
             margin-right: 20px;
         }
         .nav-link.active {
-            text-decoration: underline; /* Underline for active link */
+            text-decoration: underline; 
         }
         .header-logo {
             max-height: 150px;
@@ -37,7 +37,7 @@
         }
         .content img {
             object-fit: cover;
-            height: 100%; /* Fixed height */
+            height: 100%; 
             width: 100%;
             margin-bottom: 10px;
         }
@@ -45,11 +45,11 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 80px; /* Increased margin-bottom for more space */
-            background-color: #E8DCC6; /* Light grey background */
+            margin-bottom: 80px; 
+            background-color: #E8DCC6; 
             padding: 20px;
             border-radius: 10px;
-            border: 2px solid #ddd; /* Light grey border */
+            border: 2px solid #ddd; 
         }
         .artist-info {
             text-align: left;
@@ -57,7 +57,7 @@
 
         .artist-info img{
             object-fit: contain;
-            height: 200px; /* Fixed height */
+            height: 200px; 
             width: 100%;
             margin-bottom: 10px;
         }
@@ -75,14 +75,13 @@
             color: white;
             text-align: center;
             padding: 40px 0;
-            background-color: #333; /* Darker background color */
+            background-color: #333; 
         }
         .footer {
             background-color: #fff5e1;
             text-align: center;
             padding: 20px 0;
         }
-        /* Notification styles */
         .notification {
             display: none;
             position: fixed;
@@ -100,12 +99,10 @@
     </style>
 </head>
 <body>
-    <!-- Notification Icon -->
     <div class="notification" id="notification">
         <i class="fas fa-check-circle"></i> Message Sent Successfully!
     </div>
     
-    <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="index.html">
             <img src="images/inverted_logo.png" alt="Whisper Ink Tattoos" class="header-logo">
@@ -139,8 +136,6 @@
             </ul>
         </div>
     </nav>
-
-    <!-- Main Content -->
     <div class="content">
         <div class="contact-form">
             <h2>Contact Us</h2>
@@ -162,7 +157,6 @@
         </div>
     </div>
 
-    <!-- Footer -->
     <div class="footer">
         <img src="images/logo.webp" alt="Whisper Ink Tattoos" class="header-logo">
         <p>123 First St, Nowhere, Canada | 123-456-7890 | Hours of Operation: Mon-Sat: 9:00 - 18:00</p>
@@ -172,7 +166,6 @@
         </p>
     </div>
 
-    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -188,20 +181,16 @@
                     link.classList.add('active');
                 }
             });
-
-            // Form submission event listener
             var form = document.getElementById('contactForm');
             form.addEventListener('submit', function (event) {
-                event.preventDefault(); // Prevent the default form submission
+                event.preventDefault(); 
 
-                // Show notification
                 var notification = document.getElementById('notification');
                 notification.style.display = 'block';
 
-                // Hide the notification after 3 seconds
                 setTimeout(function () {
                     notification.style.display = 'none';
-                    form.submit(); // Submit the form after showing the notification
+                    form.submit();
                 }, 3000);
             });
         });

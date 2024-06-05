@@ -23,7 +23,7 @@
             margin-right: 20px;
         }
         .nav-link.active {
-            text-decoration: underline; /* Underline for active link */
+            text-decoration: underline;
         }
         .header-logo {
             max-height: 150px;
@@ -66,7 +66,6 @@
     </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="index.html">
             <img src="images/inverted_logo.png" alt="Whisper Ink Tattoos" class="header-logo">
@@ -101,7 +100,6 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
     <div class="content">
         <div class="form-section">
             <h2>Request an Appointment</h2>
@@ -141,6 +139,7 @@
                         <option value="">Select...</option>
                         <option value="tattoo">Tattoo</option>
                         <option value="piercing">Piercing</option>
+                        <option value="consultation">Consultation</option>
                     </select>
                 </div>
                 <div class="form-group" id="tattooDetails" style="display: none;">
@@ -169,6 +168,19 @@
                         <option value="Nate Kilden">Nate Kilden</option>
                     </select>
                 </div>
+                <div class="form-group" id="consultationDetails" style="display: none;">
+                    <label for="tattooArtist">Select Artist</label>
+                    <select class="form-control" id="consoltationArtist">
+                        <option value="">Select...</option>
+                        <option value="Kayli Mesly">Kayli Mesly</option>
+                        <option value="Justin Feild">Justin Feild</option>
+                        <option value="Mack Johnson">Mack Johnson</option>
+                        <option value="James Williams">James Williams</option>
+                        <option value="Melody Swindle (piercer)">Melody Swindle</option>
+                        <option value="Nate Kilden (piercer)">Nate Kilden</option>
+                        <option value="No Prefrence">Nate Kilden</option>
+                    </select>
+                </div>
                 <div class="form-group">
                     <label for="appointmentDate">Preferred Appointment Date <br><strong>Days Open: Mon-Sat</strong> </label>
                     <input type="date" class="form-control" id="appointmentDate" required>
@@ -182,7 +194,6 @@
         </div>
     </div>
 
-    <!-- Footer -->
     <div class="footer">
         <img src="images/logo.webp" alt="Whisper Ink Tattoos" class="header-logo">
         <p>123 First St, Nowhere, Canada | 123-456-7890 | Hours of Operation: Mon-Sat: 9:00 - 18:00</p>
@@ -192,7 +203,6 @@
         </p>
     </div>
 
-    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -212,24 +222,32 @@
             var serviceType = document.getElementById('serviceType');
             var tattooDetails = document.getElementById('tattooDetails');
             var piercingDetails = document.getElementById('piercingDetails');
+            var consultationDetails = document.getElementById('consultationDetails');
 
             serviceType.addEventListener('change', function() {
                 if (this.value === 'tattoo') {
                     tattooDetails.style.display = 'block';
                     piercingDetails.style.display = 'none';
+                    consultationDetails.style.display = 'none';
                 } else if (this.value === 'piercing') {
                     tattooDetails.style.display = 'none';
                     piercingDetails.style.display = 'block';
-                } else {
+                    consultationDetails.style.display = 'none';
+
+                } else if(this.value === 'consultation') {
                     tattooDetails.style.display = 'none';
                     piercingDetails.style.display = 'none';
+                    consultationDetails.style.display = 'block';
+                }else {
+                    tattooDetails.style.display = 'none';
+                    piercingDetails.style.display = 'none';
+                    consultationDetails.style.display = 'none';
                 }
             });
 
-            // Set default date of birth to start at 2004
             var dobField = document.getElementById('dob');
             var defaultDate = new Date();
-            defaultDate.setFullYear(2004);
+            defaultDate.setFullYear(2007);
             dobField.value = defaultDate.toISOString().split('T')[0];
 
             document.getElementById('appointmentForm').addEventListener('submit', function(e) {
