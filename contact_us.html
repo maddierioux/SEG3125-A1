@@ -139,7 +139,7 @@
     <div class="content">
         <div class="contact-form">
             <h2>Contact Us</h2>
-            <form id="contactForm" action="submit-form.php" method="post">
+            <form id="contactForm" method="post">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
 
@@ -156,7 +156,6 @@
             </form>
         </div>
     </div>
-
 
     <div class="footer">
         <img src="images/logo.webp" alt="Whisper Ink Tattoos" class="header-logo">
@@ -183,19 +182,15 @@
                 }
             });
 
-            // Form submission event listener
             var form = document.getElementById('contactForm');
             form.addEventListener('submit', function (event) {
-                event.preventDefault(); // Prevent the default form submission
-
-                // Show notification
+                event.preventDefault(); 
                 var notification = document.getElementById('notification');
                 notification.style.display = 'block';
 
-                // Hide the notification after 3 seconds
                 setTimeout(function () {
                     notification.style.display = 'none';
-                    form.submit(); // Submit the form after showing the notification
+                    form.reset(); // Reset form fields
                 }, 3000);
             });
         });
